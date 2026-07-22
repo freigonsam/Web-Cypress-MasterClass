@@ -11,5 +11,8 @@ jobs:
       - name: Clone do Projeto
         uses: actions/checkout@v6.1.0
 
+      - name: Instalando deps do proejto
+        run: npm install
+
       - name: Executando testes 
         run: npx cypress run
