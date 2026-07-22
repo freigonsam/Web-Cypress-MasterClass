@@ -1,0 +1,15 @@
+name: Run Ci Testes-Cypress
+
+on:
+  workflow_dispatch:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone do Projeto
+        uses: actions/checkout@v6.1.0
+
+      - name: Executando testes 
+        run: npx run cypress
